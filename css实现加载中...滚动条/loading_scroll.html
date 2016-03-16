@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加载中滚动条</title>
+		<style type="text/css">
+			/* 加载中... */
+			@keyframes bouncedelay{
+				0%,80%,to{
+					transform: scale(0);
+				}
+				40%{
+					transform: scale(1);
+				}
+			}
+			@-webkit-keyframes bouncedelay{
+				0%,80%,to{
+					-webkit-transform:scale(0) ;
+				}
+				40%{
+					-webkit-transform: scale(1);
+				}
+			}
+			.pin-spinner{position: absolute;width:34px;height:34px;top: 50%;left: 50%;margin-left: -17px;margin-top: -17px;}
+			.pin-spinner .pin-spinner-container{position: absolute;width: 100%;height: 100%;}
+			.pin-spinner-container2{transform: rotate(45deg);}
+			.pin-spinner-container3{transform: rotate(90deg);}
+			.pin-spinner-container1>div,.pin-spinner-container2>div,.pin-spinner-container3>div{width: 10px;height: 10px;background-color: #df2127;position: absolute;border-radius: 100%;animation: bouncedelay 1.2s infinite ease-in-out;animation-fill-mode: both;}
+			.pin-spinner-circle1{top: 0;left: 0;}
+			.pin-spinner-circle2{top: 0;right: 0;}
+			.pin-spinner-circle3{right: 0;bottom: 0;}
+			.pin-spinner-circle4{left: 0;bottom: 0;}
+			.pin-spinner-container1 .pin-spinner-circle2{animation-delay: -0.9s;}
+			.pin-spinner-container1 .pin-spinner-circle3{animation-delay: -0.6s;}
+			.pin-spinner-container1 .pin-spinner-circle4{animation-delay: -0.3s;}
+			.pin-spinner-container2 .pin-spinner-circle1{animation-delay: -1.1s;}
+			.pin-spinner-container2 .pin-spinner-circle2{animation-delay: -0.8s;}
+			.pin-spinner-container2 .pin-spinner-circle3{animation-delay: -0.5s;}
+			.pin-spinner-container2 .pin-spinner-circle4{animation-delay: -0.2s;}
+			.pin-spinner-container3 .pin-spinner-circle1{animation-delay: -1s;}
+			.pin-spinner-container3 .pin-spinner-circle2{animation-delay: -0.7s;}
+			.pin-spinner-container3 .pin-spinner-circle3{animation-delay: -0.4s;}
+			.pin-spinner-container3 .pin-spinner-circle4{animation-delay: -0.1s;}
+		</style>
+	</head>
+	<body>
+		<div class="pin-spinner">
+			<div class="pin-spinner-container pin-spinner-container1">	    
+				<div class="pin-spinner-circle1"></div>	    
+				<div class="pin-spinner-circle2"></div>	    
+				<div class="pin-spinner-circle3"></div>	    
+				<div class="pin-spinner-circle4"></div>	
+			</div>	
+			<div class="pin-spinner-container pin-spinner-container2">	    
+				<div class="pin-spinner-circle1"></div>	    
+				<div class="pin-spinner-circle2"></div>	    
+				<div class="pin-spinner-circle3"></div>	    
+				<div class="pin-spinner-circle4"></div>	
+			</div>	
+			<div class="pin-spinner-container pin-spinner-container3">	    
+				<div class="pin-spinner-circle1"></div>	    
+				<div class="pin-spinner-circle2"></div>	    
+				<div class="pin-spinner-circle3"></div>	    
+				<div class="pin-spinner-circle4"></div>	
+			</div>	
+		</div>
+	</body>
+</html>
